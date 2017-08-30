@@ -16,9 +16,8 @@
 	<!-- spring task -->
 	<task:executor id="executor" pool-size="10" />
 	<task:scheduler id="scheduler" pool-size="1" />
-	<task:annotation-driven executor="executor"
-		scheduler="scheduler" />
-	
+	<task:annotation-driven executor="executor" scheduler="scheduler" />
+	<!---->
 	<!-- 加载数据库配置 -->
 	 <bean id="configProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations">
@@ -30,7 +29,7 @@
 	</bean>
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
         <property name="properties" ref="configProperties" />
-    </bean> 
+    </bean>
 	<import resource="user-applicationContext.xml" />
-	<!--<bean id="SpringContextHolder" class="com.glodon.gbq.common.SpringContextHolder"/>-->
+	<bean id="SpringContextHolder" class="com.shuoyi.common.SpringContextHolder"/>
 </beans>

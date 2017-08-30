@@ -18,7 +18,7 @@ import java.util.Set;
  * Created by zhaosy-c on 2017/8/23.
  */
 @Repository
-public class UserBaseInfoDaoImpl extends CommonBaseDaoImpl<UserBaseInfo> implements IUserBaseInfo<UserBaseInfo> {
+public class UserBaseInfoDaoImpl extends CommonBaseDaoImpl<UserBaseInfo> implements IUserBaseInfoDao<UserBaseInfo> {
 
     @Autowired
     public void setSessionFactory(@Qualifier("userSessionFactory") SessionFactory sessionFactory) {
@@ -38,11 +38,6 @@ public class UserBaseInfoDaoImpl extends CommonBaseDaoImpl<UserBaseInfo> impleme
         return null;
     }
 
-    public static void main(String[] args) {
-        UserBaseInfoDaoImpl userBaseInfoDao = new UserBaseInfoDaoImpl();
-        UserBaseInfo oUserBaseInfo = userBaseInfoDao.findOneByUserId(201270);
-        System.out.println(oUserBaseInfo.getGLDUserID());
-    }
 
     @Override
     public UserBaseInfo findOneByGldUserId(String gldUserId) {
@@ -305,7 +300,7 @@ public class UserBaseInfoDaoImpl extends CommonBaseDaoImpl<UserBaseInfo> impleme
     @Override
     public User findOneUserByUserId(int userId) {
         StringBuffer oSql = new StringBuffer();
-        oSql.append("select new com.glodon.gbq.user.po.User(us.userId,us.companyId,us.GLDUserID,gl.account,us.gccpDisplayName,gl.userName,gl.fullUserName,gl.phoneNum,gl.passwordMobile,gl.email,us.deleted,us.userType, us.remark)")
+        oSql.append("select new com.shuoyi.user.po.User(us.userId,us.companyID,us.GLDUserID,gl.account,us.gccpDisplayName,gl.userName,gl.fullUserName,gl.phoneNum,gl.passwordMobile,gl.email,us.deleted,us.userType, us.remark)")
                 .append(" from UserBaseInfo us,GldUserDict gl where gl.GLDUserID = us.GLDUserID and us.userId = :userId ");
         HashMap<String, Object> oParams = new HashMap<String, Object>();
         oParams.put("userId", userId);

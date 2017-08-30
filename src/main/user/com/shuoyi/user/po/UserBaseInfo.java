@@ -18,7 +18,7 @@ public class UserBaseInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "UserId", unique = true, nullable = false)
+    @Column(name = "UserID", unique = true, nullable = false)
     public Integer getUserId() {
         return userId;
     }
@@ -54,7 +54,7 @@ public class UserBaseInfo {
         this.userType = userType;
     }
 
-    @Column(name = "Delete")
+    @Column(name = "Deleted")
     public Boolean getDeleted() {
         return deleted;
     }

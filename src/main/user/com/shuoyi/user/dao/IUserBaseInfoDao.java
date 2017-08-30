@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Created by zhaosy-c on 2017/8/23.
  */
-public interface IUserBaseInfo<UserBaseInfo> extends ICommomBaseDao<UserBaseInfo>{
+public interface IUserBaseInfoDao<UserBaseInfo> extends ICommomBaseDao<UserBaseInfo>{
 
         public UserBaseInfo findOneByUserId(int userId);
         public UserBaseInfo findOneByGldUserId(String gldUserId);
