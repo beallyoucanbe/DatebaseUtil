@@ -1,4 +1,4 @@
-package com.shuoyi.test;
+package com.shuoyi.txtProcess.test;
 
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;

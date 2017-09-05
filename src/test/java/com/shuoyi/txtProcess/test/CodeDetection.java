@@ -1,4 +1,4 @@
-package com.shuoyi.test;
+package com.shuoyi.txtProcess.test;
 
 import info.monitorenter.cpdetector.io.*;
 
@@ -7,7 +7,7 @@ import java.io.*;
 /**
  * Created by zhaosy-c on 2017/9/1.
  */
-public class TestApp {
+public class CodeDetection {
 
     public static void main(String[] args) throws Exception{
 

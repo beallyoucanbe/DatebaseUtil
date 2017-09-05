@@ -1,4 +1,4 @@
-package com.shuoyi.test;
+package com.shuoyi.mongoTest;
 
 import java.io.*;
 import java.util.ArrayList;

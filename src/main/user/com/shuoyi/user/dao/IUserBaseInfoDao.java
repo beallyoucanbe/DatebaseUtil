@@ -2,7 +2,6 @@ package com.shuoyi.user.dao;
 
 import com.shuoyi.common.dao.ICommomBaseDao;
 import com.shuoyi.user.po.User;
-import com.shuoyi.user.po.UserBaseInfo;
 
 import java.util.HashMap;
 import java.util.List;

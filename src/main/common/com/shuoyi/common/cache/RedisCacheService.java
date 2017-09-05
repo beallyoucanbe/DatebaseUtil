@@ -1,6 +1,5 @@
 package com.shuoyi.common.cache;
 
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.springframework.util.SerializationUtils;
 import redis.clients.jedis.Jedis;

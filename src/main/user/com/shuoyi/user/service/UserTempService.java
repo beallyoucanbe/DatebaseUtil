@@ -1,13 +1,11 @@
 package com.shuoyi.user.service;
 
-import com.shuoyi.user.cache.UserCacheUtil;
 import com.shuoyi.user.dao.IUserBaseInfoDao;
 import com.shuoyi.user.po.User;
 import com.shuoyi.user.po.UserBaseInfo;
+import com.shuoyi.user.cache.UserCacheUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

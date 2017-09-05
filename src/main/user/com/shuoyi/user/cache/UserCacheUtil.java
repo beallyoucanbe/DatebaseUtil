@@ -4,7 +4,6 @@ import com.shuoyi.common.cache.AbstractBaseCacheUtil;
 import com.shuoyi.user.po.User;
 
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by zhaosy-c on 2017/8/31.
